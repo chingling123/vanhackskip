@@ -43,10 +43,8 @@ class Home extends Component{
                                     </div>
                                     <div className="col span-1-of-3">
                                         <input type="submit" value="Sign In" />
-                                    </div>
-                                    <div className="col span-1-of-3">
                                         <Link to="/CustomerCreate" className="btn btn-full">Sign-up</Link>
-                                    </div>                            
+                                    </div>                        
                                 </div>
                                 
                             </form>

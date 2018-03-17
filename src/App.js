@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom'
 import Home from './components/Home'
 import CustomerCreate from './components/CustomerCreate'
-import './App.css';
+import Stores from './components/Stores'
+import Produts from './components/Products'
+import Products from './components/Products'
+import Cart from './components/Cart'
+import Store from './components/Store'
+
+import './App.css'
 
 class App extends Component {
   render() {
@@ -14,39 +20,23 @@ class App extends Component {
                 <ul className="main-nav js--main-nav">
                     <li><Link to="/">Home</Link></li>
                 </ul>
-                <a className="mobile-nav-icon js--nav-icon"><i className="ion-navicon-round"></i></a>
+                <ul className="main-nav js--main-nav">
+                    <Cart />
+                </ul>
             </div>
             </nav>
         </header> 
         <Switch>     
           <Route exact path="/" component={ Home } />
           <Route exact path="/CustomerCreate" component={ CustomerCreate } />
-          {/* <Route exact path="/corpoclinico"  component={ CorpoClinico } />
-          <Route exact path="/corpoclinico/create" component={ CorpoPageCreate } />                                   
-          <Route path="/corpoclinico/:id" component={ CorpoPage } />
-          <Route exact path="/unidades"  component={ Unidades } />
-          <Route exact path="/unidades/create" component={ UnidadesCreate } />
-          <Route path="/unidades/:id" component={ Unidade } />  
-          <Route exact path="/planos"  component={ Planos } />
-          <Route exact path="/planos/create" component={ PlanosCreate } />
-          <Route path="/planos/:id" component={ Plano } />  
-          <Route exact path="/especialidades"  component={ Especialidades } />
-          <Route exact path="/especialidades/create" component={ EspecialidadesCreate } />
-          <Route path="/especialidades/:id" component={ Especialidade } />  
-          <Route exact path="/exames"  component={ Exames } />
-          <Route exact path="/exames/create" component={ ExamesCreate } />
-          <Route path="/exames/:id" component={ Exame } />  
-          <Route exact path="/noticias"  component={ Preparos } />
-          <Route exact path="/noticias/create"  component={ PreparosCreate } />
-          <Route path="/noticias/:id" component={ Preparo } />  
-          <Route exact path="/cupons"  component={ Cupons } />
-          <Route exact path="/cupons/create"  component={ CupomCreate } />
-          <Route path="/cupons/:id" component={ Cupom } />  
-          <Route exact path="/push"  component={ PushN } /> */}
-        </Switch> 
+          <Route exact path="/Stores" component={ Stores } />
+          <Route exact path="/Products" component={ Products } />
+          <Route path="/stores/:id" component={ Store }/>
+        </Switch>  
       </div>
     );
   }
 }
 
-export default App;
+
+export default App

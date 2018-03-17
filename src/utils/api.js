@@ -25,14 +25,19 @@ export function authCustomer(values) {
     .then((data) => data)
 }
 
+// GET STORES
 
-
-
-
-// GET METHODS
-
-export function getCategories () {
-  return fetch(`${apiUrl}/categories`, { headers: headers})
-    .then((res) => res.json())
-    .then((data) => data.categories)
+export function getStores(){
+    return fetch(`${apiUrl}/api/v1/Store`, { headers })
+            .then((res) => res.json())
+            .then((data) => data)
 }
+
+// GET PRODUCTS
+
+export function getProducts(){
+    return fetch(`${apiUrl}/api/v1/Product`, { headers })
+            .then((res) => res.json())
+            .then((data) => data)
+}
+

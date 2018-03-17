@@ -136,12 +136,13 @@ a:visited {
   -webkit-transition: border-bottom 0.2s, color 0.2s;
   transition: border-bottom 0.2s, color 0.2s;
 }
-
+a,
 a:hover,
 a:active {
   text-decoration: none;
-  color: #555;
+  color: #fff;
   border-bottom: 1px solid transparent;
+  font-size: 12px;
 }
 
 /* ----- BUTTONS ----- */
@@ -155,6 +156,7 @@ input[type=submit] {
   border-radius: 200px;
   -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
+  cursor: pointer;
 }
 
 .btn-full:link,
@@ -396,7 +398,6 @@ header {
   display: inline-block;
   text-align: center;
   margin-right: 25px;
-  float: left;
   padding: 5px;
 }
 

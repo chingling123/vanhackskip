@@ -13,7 +13,6 @@ const signInUpReducer = (state = initialState, action) => {
             }
         case LOAD_DATA_SUCCESS:
             return {
-                ...state,
                 token: action.token
             }
         default:

@@ -62,10 +62,8 @@ class CustomerCreate extends Component {
                                     </div>
                                     <div className="col span-1-of-3">
                                         <input type="submit" value="Sign Up" />
-                                    </div>
-                                    <div className="col span-1-of-3">
                                         <Link to="/" className="btn btn-full">Cancel</Link>
-                                    </div>                            
+                                    </div>
                                 </div>
                                 
                             </form>
