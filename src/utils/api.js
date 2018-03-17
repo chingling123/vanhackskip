@@ -35,8 +35,9 @@ export function getStores(){
 
 // GET PRODUCTS
 
-export function getProducts(){
-    return fetch(`${apiUrl}/api/v1/Product`, { headers })
+export function getProducts(value){
+    console.log('redux: ', value)
+    return fetch(`${apiUrl}/api/v1/Store/${value}/products`, { headers })
             .then((res) => res.json())
             .then((data) => data)
 }

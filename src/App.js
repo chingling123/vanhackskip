@@ -4,7 +4,6 @@ import Home from './components/Home'
 import CustomerCreate from './components/CustomerCreate'
 import Stores from './components/Stores'
 import Produts from './components/Products'
-import Products from './components/Products'
 import Cart from './components/Cart'
 import Store from './components/Store'
 
@@ -31,7 +30,7 @@ class App extends Component {
           <Route exact path="/CustomerCreate" component={ CustomerCreate } />
           <Route exact path="/Stores" component={ Stores } />
           <Route exact path="/Products" component={ Products } />
-          <Route path="/stores/:id" component={ Store }/>
+          <Route path="/Stores/:id/:name" component={ Store }/>
         </Switch>  
       </div>
     );

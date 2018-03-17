@@ -1,4 +1,4 @@
-import { LOAD_DATA_REQUEST, LOAD_DATA_SUCCESS, LOAD_DATA_FAILURE} from '../actions/SignInUp'
+import { LOAD_DATA_REQUEST, LOAD_DATA_SUCCESS } from '../actions/SignInUp'
 
 const initialState = {
     token: '',
