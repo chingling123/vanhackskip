@@ -3,7 +3,7 @@ import { Switch, Route, Link } from 'react-router-dom'
 import Home from './components/Home'
 import CustomerCreate from './components/CustomerCreate'
 import Stores from './components/Stores'
-import Produts from './components/Products'
+import Products from './components/Products'
 import Cart from './components/Cart'
 import Store from './components/Store'
 
@@ -18,6 +18,9 @@ class App extends Component {
             <div className="row">
                 <ul className="main-nav js--main-nav">
                     <li><Link to="/">Home</Link></li>
+                </ul>
+                <ul className="main-nav js--main-nav">
+                    <li><Link to="/Stores">Stores</Link></li>
                 </ul>
                 <ul className="main-nav js--main-nav">
                     <Cart />

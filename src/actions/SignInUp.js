@@ -1,18 +1,18 @@
 import * as API from '../utils/api';
 
-export const LOAD_DATA_REQUEST = 'LOAD_DATA_REQUEST'
-export const LOAD_DATA_SUCCESS = 'LOAD_DATA_SUCCESS' 
-export const LOAD_DATA_FAILURE = 'LOAD_DATA_FAILURE' 
+export const SIGN_LOAD_DATA_REQUEST = 'SIGN_LOAD_DATA_REQUEST'
+export const SIGN_LOAD_DATA_SUCCESS = 'SIGN_LOAD_DATA_SUCCESS' 
+export const SIGN_LOAD_DATA_FAILURE = 'SIGN_LOAD_DATA_FAILURE' 
 
 export const loadDataRequest = () => {
     return{
-        type: LOAD_DATA_REQUEST
+        type: SIGN_LOAD_DATA_REQUEST
     }
 }
 
 export const loadDataSuccess = (data) => {
     return {
-        type: LOAD_DATA_SUCCESS,
+        type: SIGN_LOAD_DATA_SUCCESS,
         token: data,
         failure: false
     }

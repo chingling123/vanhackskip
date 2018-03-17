@@ -25,6 +25,7 @@ export function authCustomer(values) {
     .then((data) => data)
 }
 
+
 // GET STORES
 
 export function getStores(){

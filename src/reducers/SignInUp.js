@@ -1,19 +1,19 @@
-import { LOAD_DATA_REQUEST, LOAD_DATA_SUCCESS } from '../actions/SignInUp'
+import { SIGN_LOAD_DATA_REQUEST, SIGN_LOAD_DATA_SUCCESS } from '../actions/SignInUp'
 
 const initialState = {
-    token: '',
+    data: '',
     loading: false
 }
 
 const signInUpReducer = (state = initialState, action) => {
     switch(action.type){
-        case LOAD_DATA_REQUEST:
+        case SIGN_LOAD_DATA_REQUEST:
             return {
                 loading: true
             }
-        case LOAD_DATA_SUCCESS:
+        case SIGN_LOAD_DATA_SUCCESS:
             return {
-                token: action.token
+                data: action.token
             }
         default:
             return state
