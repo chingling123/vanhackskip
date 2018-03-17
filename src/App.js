@@ -6,6 +6,7 @@ import Stores from './components/Stores'
 import Products from './components/Products'
 import Cart from './components/Cart'
 import Store from './components/Store'
+import Checkout from './components/Checkout'
 
 import './App.css'
 
@@ -34,6 +35,7 @@ class App extends Component {
           <Route exact path="/Stores" component={ Stores } />
           <Route exact path="/Products" component={ Products } />
           <Route path="/Stores/:id/:name" component={ Store }/>
+          <Route exact path="/Checkout" component={ Checkout }/>
         </Switch>  
       </div>
     );

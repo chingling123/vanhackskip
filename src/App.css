@@ -132,7 +132,6 @@ a:visited {
   color: #008fd5;
   text-decoration: none;
   padding-bottom: 1px;
-  /* border-bottom: 1px solid #008fd5; */
   -webkit-transition: border-bottom 0.2s, color 0.2s;
   transition: border-bottom 0.2s, color 0.2s;
 }
@@ -140,7 +139,7 @@ a,
 a:hover,
 a:active {
   text-decoration: none;
-  color: #fff;
+  color: rgb(247, 169, 25);
   border-bottom: 1px solid transparent;
   font-size: 12px;
 }
