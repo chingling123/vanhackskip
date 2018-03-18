@@ -16,10 +16,9 @@ export function createCustomer(values) {
 
 // AUTH CUSTOMER
 export function authCustomer(values) {
-    return fetch(`${apiUrl}/api/v1/Customer/auth`, { 
+    return fetch(`${apiUrl}/api/v1/Customer/auth?email=${values.email}&password=${values.password}`, { 
         method: 'POST',
-        headers: headers,
-        body: JSON.stringify(values)
+        headers: headers
     })
     .then((res) => res.json())
     .then((data) => data)

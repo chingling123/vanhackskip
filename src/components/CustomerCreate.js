@@ -12,6 +12,13 @@ class CustomerCreate extends Component {
         this.props.createCustomer(values)
     }
 
+    componentWillReceiveProps(next){
+        if(next.signinup.data !== []){
+            sessionStorage.setItem('token', next.signinup.data)
+            next.history.push("/Stores")
+        }
+    }
+
     render(){
         const signinup = this.props.signinup
 

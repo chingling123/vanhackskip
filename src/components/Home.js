@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import serializeform from 'form-serialize'
 import { connect } from 'react-redux'
-import { authCustomer } from '../actions/SignInUp'
+import { authCustomer, logout } from '../actions/SignInUp'
 
 class Home extends Component{
 
@@ -12,6 +12,28 @@ class Home extends Component{
         this.props.authCustomer(values)
     }
 
+    componentDidMount(){
+        console.log(this.props.token)
+        if(this.props.signout === true){
+            console.log('this.props.signout === true')
+            sessionStorage.removeItem('token')
+            this.props.logout()
+        }else if(this.props.token){
+            console.log('props.token')
+            this.props.history.push("/Stores")
+        }
+        console.log(this.props)
+    }
+
+    componentWillReceiveProps(next){
+        console.log("next ", next)
+        if(next.signinup.data !== null){
+            sessionStorage.setItem('token',next.signinup.data)
+        }else{
+            next.history.push('/')
+        }
+    }
+ 
     render(){
         return(
             <section className="section-features">
@@ -63,7 +85,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        authCustomer: (values) => dispatch(authCustomer(values))
+        authCustomer: (values) => dispatch(authCustomer(values)),
+        logout: () => dispatch(logout())
     }
 }
 

@@ -1,7 +1,7 @@
-import { SIGN_LOAD_DATA_REQUEST, SIGN_LOAD_DATA_SUCCESS } from '../actions/SignInUp'
+import { SIGN_LOAD_DATA_REQUEST, SIGN_LOAD_DATA_SUCCESS, SIGN_OUT_DATA_FAILURE } from '../actions/SignInUp'
 
 const initialState = {
-    data: '',
+    data: null,
     loading: false
 }
 
@@ -12,6 +12,10 @@ const signInUpReducer = (state = initialState, action) => {
                 loading: true
             }
         case SIGN_LOAD_DATA_SUCCESS:
+            return {
+                data: action.token
+            }
+        case SIGN_OUT_DATA_FAILURE:
             return {
                 data: action.token
             }

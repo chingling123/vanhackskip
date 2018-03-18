@@ -135,6 +135,7 @@ a:visited {
   -webkit-transition: border-bottom 0.2s, color 0.2s;
   transition: border-bottom 0.2s, color 0.2s;
 }
+
 a,
 a:hover,
 a:active {
@@ -147,6 +148,7 @@ a:active {
 /* ----- BUTTONS ----- */
 .btn:link,
 .btn:visited,
+button,
 input[type=submit] {
   display: inline-block;
   padding: 10px 30px;
@@ -160,6 +162,7 @@ input[type=submit] {
 
 .btn-full:link,
 .btn-full:visited,
+button,
 input[type=submit] {
   background-color: #008fd5;
   border: 1px solid #008fd5;
